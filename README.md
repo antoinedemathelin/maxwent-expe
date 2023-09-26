@@ -18,36 +18,36 @@ MaxWEnt significantly improves the out-of-distribution uncertainty estimation in
 <table>
   <tr valign="top">
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_cla_de_5.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_cla_de_5.png">
     </td>
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_cla_mcd_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_cla_mcd_1.png">
     </td>
      <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_cla_bnn_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_cla_bnn_1.png">
     </td>
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_cla_mwe_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_cla_mwe_1.png">
     </td>
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_cla_mwesvd_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_cla_mwesvd_1.png">
     </td>
   </tr>
   <tr valign="top">
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_reg_de_5.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_reg_de_5.png">
     </td>
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_reg_mcd_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_reg_mcd_1.png">
     </td>
      <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_reg_bnn_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_reg_bnn_1.png">
     </td>
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_reg_mwe_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_reg_mwe_1.png">
     </td>
     <td width="20%">
-         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/da4662d52753c2130d412aaa08e5b58876cde215/images/toy_reg_mwesvd_1.png">
+         <img src="https://github.com/antoinedemathelin/maxwent-expe/blob/bd347b438a62c0acb0b5e4b7e7b1c6b61bf3531a/images/toy_reg_mwesvd_1.png">
     </td>
   </tr>
   <tr valign="top">
