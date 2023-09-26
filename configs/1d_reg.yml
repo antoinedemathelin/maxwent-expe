@@ -1,0 +1,21 @@
+name: 1d_reg
+
+savedir: results
+dataset: 1d_reg
+n_runs: 1
+n_jobs: null
+n_estimators: 1
+epochs: 200
+batch_size: 32
+steps_per_epoch: 100
+network: DenseNet
+network_params:
+    layers: 3
+    last_units: 2
+    activation: "relu"
+    last_activation: null
+optimizer: Adam
+optimizer_params:
+    lr: 0.001
+callbacks: SaveModel
+loss: GaussianNegativeLogLikelihood

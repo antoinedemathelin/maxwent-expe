@@ -1,0 +1,22 @@
+name: citycam
+
+savedir: results
+n_runs: 1
+n_jobs: null
+n_estimators: 1
+epochs: 100
+batch_size: 128
+steps_per_epoch: 100
+network: DenseNet
+network_params:
+    layers: 3
+    last_units: 2
+    units: 100
+    activation: "relu"
+    last_activation: null
+optimizer: Adam
+optimizer_params:
+    lr: 0.001
+callbacks: SaveModel
+loss: GaussianNegativeLogLikelihood
+rescale_output: True

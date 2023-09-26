@@ -1,0 +1,58 @@
+name: 1d_reg_all
+
+savedir: results
+dataset: 1d_reg
+n_runs: 1
+n_jobs: null
+n_estimators: 1
+epochs: 200
+batch_size: 32
+steps_per_epoch: 100
+network: DenseNet
+network_params:
+    layers: 3
+    last_units: 2
+    activation: "relu"
+    last_activation: null
+optimizer: Adam
+optimizer_params:
+    lr: 0.001
+callbacks: SaveModel
+loss: GaussianNegativeLogLikelihood
+
+runs:
+    DeepEnsemble:
+        method: DeepEnsemble
+        epochs: 100
+    MCDropout:
+        method: MCDropout
+        params:
+            - rate: 0.05
+            - rate: 0.1
+            - rate: 0.2
+            - rate: 0.3
+            - rate: 0.5
+    BNN:
+        method: BNN
+        params:
+            - lambda_: 0.01
+            - lambda_: 0.1
+            - lambda_: 1.
+            - lambda_: 10.
+            - lambda_: 100.
+    MaxWEnt:
+        method: MaxWEnt
+        params:
+            - lambda_: 10.
+              kernel_noise_initializer: -5.
+              bias_noise_initializer: -5.
+        pretrained_weights: DeepEnsemble
+        callbacks_params:
+            threshold: True
+    MaxWEntSVD:
+        method: MaxWEntSVD
+        params:
+            - lambda_: 10.
+        pretrained_weights: DeepEnsemble
+        callbacks_params:
+            threshold: True

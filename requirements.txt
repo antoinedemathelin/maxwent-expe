@@ -1,0 +1,10 @@
+tensorflow==2.12
+tensorflow-probability==0.20
+numpy
+scipy
+scikit-learn
+matplotlib
+pandas
+Pillow
+openpyxl
+xlrd

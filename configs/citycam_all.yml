@@ -1,0 +1,130 @@
+name: citycam
+
+savedir: results
+n_runs: 5
+n_jobs: 5
+n_estimators: 5
+epochs: 100
+batch_size: 128
+steps_per_epoch: 100
+network: DenseNet
+network_params:
+    layers: 3
+    last_units: 2
+    units: 100
+    activation: "relu"
+    last_activation: null
+optimizer: Adam
+optimizer_params:
+    lr: 0.001
+callbacks: SaveModel
+loss: GaussianNegativeLogLikelihood
+rescale_output: True
+
+datasets:
+    - citycam_weather
+    - citycam_bigbus
+    - citycam_cameras
+
+methods:
+    MCDropout1:
+        method: MCDropout
+        n_estimators: 1
+        epochs: 500
+        params:
+            - rate: 0.05
+            - rate: 0.1
+            - rate: 0.2
+            - rate: 0.3
+            - rate: 0.5
+    BNN1:
+        method: BNN
+        n_estimators: 1
+        epochs: 500
+        params:
+            - lambda_: 0.01
+            - lambda_: 0.1
+            - lambda_: 1.
+            - lambda_: 10.
+            - lambda_: 100.
+    MCDropout5:
+        method: MCDropout
+        epochs: 500
+        params:
+            - rate: 0.05
+            - rate: 0.1
+            - rate: 0.2
+            - rate: 0.3
+            - rate: 0.5
+    BNN5:
+        method: BNN
+        epochs: 500
+        params:
+            - lambda_: 0.01
+            - lambda_: 0.1
+            - lambda_: 1.
+            - lambda_: 10.
+            - lambda_: 100.
+    DeepEnsemble:
+        method: DeepEnsemble
+    RDE:
+        method: RDE
+    AnchoredNetwork:
+        method: AnchoredNetwork
+        params:
+            - sigma: 0.1
+              lambda_: 0.1
+            - sigma: 0.1
+              lambda_: 1.0
+            - sigma: 0.1
+              lambda_: 10.0
+            - sigma: 1.0
+              lambda_: 0.1
+            - sigma: 1.0
+              lambda_: 1.0
+            - sigma: 1.0
+              lambda_: 10.0
+            - sigma: 10.0
+              lambda_: 0.1
+            - sigma: 10.0
+              lambda_: 1.0
+            - sigma: 10.0
+              lambda_: 10.0
+    NegativeCorrelation:
+        method: NegativeCorrelation
+        params:
+            - lambda_: 0.00001
+            - lambda_: 0.0001
+            - lambda_: 0.001
+            - lambda_: 0.01
+            - lambda_: 0.1
+            - lambda_: 1
+    MOD:
+        method: MOD
+        params:
+            - lambda_: 0.00001
+            - lambda_: 0.0001
+            - lambda_: 0.001
+            - lambda_: 0.01
+            - lambda_: 0.1
+            - lambda_: 1
+    MaxWEnt5:
+        method: MaxWEnt
+        epochs: 500
+        params:
+            lambda_: 10.
+            kernel_noise_initializer: -5.
+            bias_noise_initializer: -5.
+        pretrained_weights: DeepEnsemble
+        callbacks_params:
+            threshold: True
+    MaxWEntSVD5:
+        method: MaxWEntSVD
+        epochs: 500
+        params:
+            lambda_: 10.
+            kernel_noise_initializer: -5.
+            bias_noise_initializer: -5.
+        pretrained_weights: DeepEnsemble
+        callbacks_params:
+            threshold: True
