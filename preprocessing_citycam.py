@@ -15,11 +15,9 @@ from tensorflow.keras import Sequential
 from PIL import Image
 
 path_to_array = "./datasets/citycam"
-# C:/Users/antoi/Documents/PHD/Code/experiments/datasets/citycam_images
-#WEBCAMS = ['398', 'bigbus', '164', '166', '170', '173', '181', '253', 
            
-WEBCAMS = ['403', '410', '495', '511', '551', '572', '691',
-           '846', '928']
+WEBCAMS = ['398', 'bigbus', '164', '166', '170', '173', '181', '253', 
+           '403', '410', '495', '511', '551', '572', '691','846', '928']
 
 if __name__ == "__main__":
     try:
@@ -98,10 +96,6 @@ if __name__ == "__main__":
                                           (i, count, time, wheather_, flow_))
 
                                     i += 1
-
-                        # fig, ax = plt.subplots(1, 1, figsize=(5, 4))
-                        # ax.imshow(final_image)
-                        # plt.show()
                         
                         X = np.stack(X, axis=0)
                         X = resnet50.predict(preprocess_input(X), batch_size=64, verbose=1)
