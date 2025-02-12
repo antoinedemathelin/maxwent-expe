@@ -1,6 +1,22 @@
 # Maximum Weight Entropy
 
-This repository provides the source code of the Maximum Weight Entropy (**MaxWEnt**) experiments.
+This repository provides the source code of the experiments for the paper: [Deep Out-of-Distribution Uncertainty Quantification via Weight Entropy Maximization (JMLR)](https://www.jmlr.org/papers/v26/23-1359.html)
+
+## 📦 Install & Use the PyPI Package  
+
+Our method is now available as a Python package on [PyPI](https://pypi.org/project/maxwent/)! 🚀 Easily install it with:  
+
+```
+pip install maxwent
+```
+
+For detailed usage and examples, visit this [GitHub repository](https://github.com/antoinedemathelin/maxwent).
+
+🔹  Compatible with TensorFlow & PyTorch
+
+🔹  Comprehensive tutorials included in the documentation
+
+🔹  Easily adaptable to new data
 
 ## Overview
 
@@ -107,4 +123,21 @@ The models are stored in the `results/` folder and the scores in the `logs/` fol
 **Note** : the CityCam dataset should first be downloaded from this [website](https://www.citycam-cmu.com/), then preprocessed with the following command line:
 ```
 python preprocessing_citycam.py <path_to_the_citycam_dataset_on_your_labtop>
+```
+
+### Reference
+
+If you use this repository in your research, please cite our work using the following reference:
+
+```
+@article{JMLR:v26:23-1359,
+  author  = {Antoine de Mathelin and Fran{\c{c}}ois Deheeger and Mathilde Mougeot and Nicolas Vayatis},
+  title   = {Deep Out-of-Distribution Uncertainty Quantification via Weight Entropy Maximization},
+  journal = {Journal of Machine Learning Research},
+  year    = {2025},
+  volume  = {26},
+  number  = {4},
+  pages   = {1--68},
+  url     = {http://jmlr.org/papers/v26/23-1359.html}
+}
 ```
